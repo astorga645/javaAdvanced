@@ -29,7 +29,7 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */ 
 
-
+package utilerias;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.*;
@@ -59,6 +59,7 @@ public class LoadImageApp extends Component {
        try {
            img = ImageIO.read(new File(imagen));
        } catch (IOException e) {
+           System.out.println(e.getMessage());
        }
 
     }
@@ -69,8 +70,22 @@ public class LoadImageApp extends Component {
         } else {
            return new Dimension(img.getWidth(null), img.getHeight(null));
        }
-    }
-
+    }/*
+    void musica(){
+        JFileChooser archivo = new JFileChooser();
+        archivo.setFileFilter(filtro);
+        intseleccion = archivo.showOpenDialog(archivo);
+                URL url = null;
+        if(seleccion == JFileChooser.APPROVE_OPTION){
+        try {
+        url = archivo.getSelectedFile().toURL();
+                    } catch (MalformedURLException ex) {
+        Logger.getLogger(Ventana.class.getName()).log(Level.SEVERE, null, ex);
+                    }           
+        AudioClipmusicarep = java.applet.Applet.newAudioClip(url);
+        musicarep.play();
+                }
+            }*/
     public static void main(String[] args) {
 
         JFrame f = new JFrame("Load Image Sample");
@@ -80,8 +95,8 @@ public class LoadImageApp extends Component {
                     System.exit(0);
                 }
             });
-
-        f.add(new LoadImageApp());
+        String img="mapaMundi.jpg";
+        f.add(new LoadImageApp(img));
         f.pack();
         f.setVisible(true);
     }

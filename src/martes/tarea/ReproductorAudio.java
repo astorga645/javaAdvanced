@@ -16,7 +16,7 @@ import javax.sound.sampled.Clip;
  * @author jorgearturo
  */
 public class ReproductorAudio {
-    public static void reproduce(){
+    public void ReproductorAudio(){
         try {
 			String s="musica.wav";
 			AudioInputStream ais =
@@ -46,7 +46,7 @@ public class ReproductorAudio {
 		}
     }
     public static void main(String[] agrs){
-        reproduce();
+        ReproductorAudio audio = new ReproductorAudio();
         
     }
 }

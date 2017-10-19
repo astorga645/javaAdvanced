@@ -14,7 +14,7 @@ import martes.curso.Artista;
  */
 
 public class Presentador{
-    public static void main(String[] args) {
+    public static void main(String[] args)throws Exception {
         /*se crean los objetos y se manipulan*/
         Artista artista=new Artista();
         ArrayList<Artista> lista=new ArrayList<Artista>();
@@ -26,7 +26,7 @@ public class Presentador{
         presentador = new Cantar();
         presentador.mostrarImagenes(lista.get(0).getImg());
         presentador.tocarInstrumentos();
-        presentador.reproducirMusica("musica.wav");       
+        presentador.reproducirMusica("onlyone.wav");       
         
         //presentador.detenerMusica();
         System.out.println("Presentador: Se cambiara de artista en "
@@ -34,7 +34,7 @@ public class Presentador{
         presentador = new Cantar();
         presentador.mostrarImagenes(lista.get(1).getImg());
         presentador.tocarInstrumentos();
-        presentador.reproducirMusica("cancion2.wav");
+        presentador.reproducirMusica("buenosdias.wav");
         //presentador.detenerMusica();
     }
 }

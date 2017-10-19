@@ -11,7 +11,7 @@ package martes.curso;
  */
 public class Artista {
     private String nombre;
-    private String instrumento;
+    private String cancion;
     private String img;
     private char sexo;
     private String genero;
@@ -19,15 +19,15 @@ public class Artista {
     private int edad;
     
     public Artista(){}
-    public Artista( String nombre, String genero, String instrumento){
+    public Artista( String nombre, String genero, String cancion){
         this.nombre = nombre;
         this.genero = genero;
-        this.instrumento=instrumento;
+        this.cancion=cancion;
     }
-    public Artista( String nombre, String genero, String instrumento,String img,char sexo,int edad, int integrantes){
+    public Artista( String nombre, String genero, String cancion,String img,char sexo,int edad, int integrantes){
         this.nombre = nombre;
         this.genero = genero;
-        this.instrumento=instrumento;
+        this.cancion=cancion;
         this.img=img;
         this.edad = edad;
         this.sexo=sexo;
@@ -35,7 +35,7 @@ public class Artista {
     }
     public String getNombre(){return nombre;}
     public String getImg(){return img;}
-    public String getInstrumento(){return instrumento;}
+    public String getCancion(){return cancion;}
     public String getGenero(){return genero;}
     public char getSexo(){return sexo;}
     public int getEdad(){return edad;}
@@ -61,9 +61,9 @@ public class Artista {
         }else
             return false;
     }
-    public boolean setInstrumento(String instrumento){
-        if(!instrumento.isEmpty()){
-            this.instrumento = instrumento;
+    public boolean setCancion(String cancion){
+        if(!cancion.isEmpty()){
+            this.cancion = cancion;
             return true;
         }else
             return false;
@@ -88,5 +88,9 @@ public class Artista {
             return true;
         }else
             return false;
+    }
+    public String todoString(){
+        String str = this.cancion + " - "+this.genero + " - "+ this.img + " - "+this.nombre;
+        return str;
     }
 }

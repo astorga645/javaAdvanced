@@ -18,10 +18,8 @@ import utilerias.LoadImageApp;
  *
  * @author HP
  */
-public class Cantar extends Concierto implements Runnable{
-    public void run(){
-        System.out.println("Corriendo hilo cantante");
-    }
+public class Cantar extends Concierto{
+    
  @Override
     public void tocarInstrumentos() {
         System.out.println("Se tocan instrumentos de musica clasica");
@@ -43,15 +41,21 @@ public class Cantar extends Concierto implements Runnable{
         f.pack();
         f.setVisible(true);
     }
-    
-    @Override
-    public void reproducirMusica(String cancion) {
+    public void reproducirMusica2(String cancion) {
       System.out.println("Se reproduce la musica");
       try{
         ProcessBuilder p=new ProcessBuilder("cmd.exe","/c","start",cancion);
         p.start();
         }catch(Exception e) {
         System.out.println(e);}
+    }
+    @Override
+    public void reproducirMusica(String cancion)throws Exception {
+      System.out.println("Se reproduce la musica");
+      InputStream objInputStream = new FileInputStream(cancion);
+      AudioStream objAudioStream;
+      objAudioStream = new AudioStream(objInputStream);
+      AudioPlayer.player.start(objAudioStream);
     }
 
     @Override

@@ -19,7 +19,7 @@ abstract class Concierto {
     
     public abstract void tocarInstrumentos();
     public abstract void mostrarImagenes(String img);
-    public abstract void reproducirMusica(String cancion);
+    public abstract void reproducirMusica(String cancion)throws Exception;
     public abstract void detenerMusica();
     public abstract void cambiarArtista();
 }

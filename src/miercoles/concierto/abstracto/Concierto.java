@@ -13,8 +13,9 @@ import javax.swing.JFrame;
  * @author HP
  */
 abstract class Concierto {
+    /*
     static protected JFrame f = new JFrame("Load Image Sample");;
-    static protected AudioInputStream stream;
+    static protected AudioInputStream stream;*/
     
     public abstract void tocarInstrumentos();
     public abstract void mostrarImagenes(String img);

@@ -28,7 +28,7 @@ public class LoadImage3 implements Runnable{
     }
     synchronized void display(){
         try {
-            System.out.println("Muestra Imagen");
+            //System.out.println("Muestra Imagen");
             //fv.setVisible(false);
             muestra(this.imagen);
             //musica.musica("onlyone.wav");
@@ -45,7 +45,7 @@ public class LoadImage3 implements Runnable{
     }
     synchronized void display(String imagen,String imagen2){
         try {
-            System.out.println("Muestra Imagen");
+            //System.out.println("Muestra Imagen");
             //fv.setVisible(false);
             muestra(imagen);
             //musica.musica("onlyone.wav");

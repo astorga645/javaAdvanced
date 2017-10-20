@@ -26,7 +26,7 @@ public class LoadMusica3 implements Runnable{
     }
     public void run(){
         try {
-            System.out.println("pone Cancion");
+            //System.out.println("pone Cancion");
             musica();
             Thread.sleep(1000);
         } catch (IOException ex) {

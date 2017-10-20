@@ -11,7 +11,7 @@ package jueves.casa;
  */
 public class ActivaServer {
     public static void main(String[] args) {
-        Servidor srv = new Servidor();
+        Servidor2 srv = new Servidor2();
         srv.iniciar();
     }
 }
